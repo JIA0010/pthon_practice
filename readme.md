@@ -1,0 +1,28 @@
+1. app/main.py を作成して、以下のような FastAPI アプリケーションを実装してください
+### 1. ヘルスチェック API
+HTTP メソッド: GET
+パス: /health
+レスポンス:
+{ "status": "ok" }
+### 2. 挨拶 API
+HTTP メソッド: GET
+パス: /greet
+クエリパラメータ: name（任意）
+仕様:
+name が指定されていれば Hello, {name}!
+指定されていなければ Hello, anonymous!
+### 3. TODO 作成 API
+HTTP メソッド: POST
+パス: /todos
+リクエストボディ(JSON):
+{
+  "title": "string",
+  "done": false
+}
+レスポンス例
+{
+  "id": 1,
+  "title": "Buy milk",
+  "done": false
+}
+2. それぞれテストコードも書いてください。(pytest あたりを install すると良いです) (edited) 
